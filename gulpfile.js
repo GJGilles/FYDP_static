@@ -101,7 +101,7 @@ function js() {
 // Copy task
 function copy() {
   return gulp
-    .src("./assets/*")
+    .src("./assets/**")
     .pipe(gulp.dest("./dist"));
 }
 

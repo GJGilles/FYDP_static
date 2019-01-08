@@ -39,4 +39,27 @@
   // Collapse the navbar when page is scrolled
   $(window).scroll(navbarCollapse);
 
+  var posts = $("[post-content]");
+  var buttons = $("[post-select]");
+
+  $(posts[0]).show();
+  $(buttons[0]).addClass("disabled");
+
+  for(var i = 0; i < buttons.length; i++) {
+    (function(i) {
+      $(buttons[i]).click(function() {
+        console.log(i);
+        for(var j = 0; j < posts.length; j++) {
+          if (i == j) {
+            $(posts[j]).show();
+            $(buttons[j]).addClass("disabled");
+          } else {
+            $(buttons[j]).removeClass("disabled");
+            $(posts[j]).hide();
+          }
+        }
+      });
+    })(i);
+  }
+
 })(jQuery); // End of use strict
