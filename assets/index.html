@@ -137,7 +137,80 @@
       <div class="row">
         <div class="col-lg-12 mx-auto">
           <h2 class="text-white mb-4">Progress Updates</h2>
-          <div class="card">
+
+          <nav aria-label="Page navigation">
+              <ul class="pagination">
+                <li post-select class="page-item"><a class="page-link" href="#progress">1</a></li>
+                <li post-select class="page-item"><a class="page-link" href="#progress">2</a></li>
+                <li post-select class="page-item"><a class="page-link" href="#progress">3</a></li>
+                <li post-select class="page-item"><a class="page-link" href="#progress">4</a></li>
+                <li post-select class="page-item"><a class="page-link" href="#progress">5</a></li>
+                <li post-select class="page-item"><a class="page-link" href="#progress">6</a></li>
+                <li post-select class="page-item"><a class="page-link" href="#progress">7</a></li>
+              </ul>
+            </nav>
+
+          <div class="card" style="margin-top: -16px">
+            <div post-content class="card-body">
+              <h3>Software Update 6: 9 Mar 2019</h3>
+              <p>
+                The number of tests has grown greatly over the past week as the other systems have really come together. The one piece of firmware that has probably grown
+                the most is the core movement algorithm, which now implements a fancy control algorithm in order to achieve maximum possible accuracy in moves. The limit switches,
+                motors and encoders have all been tested extensively. The movement, calibration and scanning scripts are all in place and seem to work fairly well, although they could 
+                use some minor improvements. The scanning is yet to be tested as the electrical system still needs to be put in place. In order to accomodate this, regular pawns can now be 
+                manually added. 
+              </p>
+            </div>
+            <div post-content class="card-body">
+              <h3>Software Update 5: 2 Mar 2019</h3>
+              <p>
+                As the hardware and electrical approach a state where testing can actually begin, it has become important to prepare firmware scripts and tests in order to
+                determine system parameters and any tweaks that may have to be made to the software in order to accomodate inaccuracies in the other systems. A new software 
+                repository was started in order to house the new testing scripts that will be used and a great deal of progress was made on writing firmware. Testing should begin soon
+                and with it great pain.
+              </p>
+            </div>
+            <div post-content class="card-body">
+              <h3>Software Update 4: 23 Feb 2019</h3>
+              <p>
+                Mostly a slow week, but loading bars are now implemented end-to-end so that they will update based on the current progress of the current running task.
+              </p>
+              <img class="img-fluid rounded mx-auto d-block" src="img/wk_4/loading.PNG" alt="Responsive image">
+            </div>
+            <div post-content class="card-body">
+              <h3>Software Update 3: 16 Feb 2019</h3>
+              <p>
+                The most major update for this week is the addition of the specific user interface for players. This view is like the old interface stripped of all of the
+                'extra' information, so that there is only the interface for adding moves. This interface is also a lot cleaner on mobile, which is optimal for players who may 
+                not always bring a device with a large screen to gaming nights. The new interface is shown in its mobile layout form, below.
+              </p>
+              <img class="img-fluid rounded mx-auto d-block" src="img/wk_3/mobile.PNG" alt="Responsive image">
+              <p>
+                Another more minor update is that pawns are now seperated more cleanly in th user interface based on if they are obstacles or not.
+                The user interface also now supports groups, which are a way of organizing pawns. These changes are purely for increasing the user experience,
+                although they may create a groundwork for future improvements.
+              </p>
+              <img class="img-fluid rounded mx-auto d-block" src="img/wk_3/groups.PNG" alt="Responsive image">
+            </div>
+            <div post-content class="card-body">
+              <h3>Software Update 2: 9 Feb 2019</h3>
+              <p>
+                The main software this week was the refactoring of the backend so that the load on the pi was reduced.
+                The backend used to be a single web server which resided on the pi and managed all of the core software functionality.
+                Now, the backend has been split into two web servers. The pi has a very simple web server which is only focused on passing move information
+                to the table firmware. All of the more complicated functionality is now in a web server designed to run on a computer. Thus, the load on the pi will be greatly reduced.
+                The new sofware architecture is shown below, although it also shows the plans for divided interfaces for players and GMs.
+              </p>
+              <img class="img-fluid rounded mx-auto d-block" src="img/wk_2/sw_arch.png" alt="Responsive image">
+              <p>
+                The next update to the software is the addition of a header to the user interface. In addition to this looking visually better, it provides a space for some more functionality.
+                Specifically, the frontend now allows the user to input a username which will be saved across multiple sessions. This username will be used to tag their moves so that the 
+                GM can track where different moves come from. This is the first step towards an actual user management architecture, although that is probably out of scope for this project.
+              </p>
+              <img class="img-fluid rounded mx-auto d-block" src="img/wk_2/header.PNG" alt="Responsive image">
+              <p></p>
+              <img class="img-fluid rounded mx-auto d-block" src="img/wk_2/name_queue.PNG" alt="Responsive image">
+            </div>
             <div post-content class="card-body">
               <h3>Software Update 1: 2 Feb 2019</h3>
               <img class="img-fluid rounded" src="img/wk_1/Overview.PNG" alt="Responsive image">
@@ -213,6 +286,11 @@
             <ul class="pagination">
               <li post-select class="page-item"><a class="page-link" href="#progress">1</a></li>
               <li post-select class="page-item"><a class="page-link" href="#progress">2</a></li>
+              <li post-select class="page-item"><a class="page-link" href="#progress">3</a></li>
+              <li post-select class="page-item"><a class="page-link" href="#progress">4</a></li>
+              <li post-select class="page-item"><a class="page-link" href="#progress">5</a></li>
+              <li post-select class="page-item"><a class="page-link" href="#progress">6</a></li>
+              <li post-select class="page-item"><a class="page-link" href="#progress">7</a></li>
             </ul>
           </nav>
         </div>
